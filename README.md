@@ -1,4 +1,6 @@
 # PruebaTecnoin
+Nombre de desarrollador: Willian Adalberto Hernandez
+Plaza: Desarrollador FrontEnd Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
