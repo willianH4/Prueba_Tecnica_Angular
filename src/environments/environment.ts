@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apikey: 'A8KIOjtrKBA8eS21iW9Ojs8cxtM6kygI',
+  urlBase: 'https://api.tomtom.com/search/2/search/',
+  extension: 'json',
+
 };
 
 /*

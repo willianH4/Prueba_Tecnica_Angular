@@ -1,0 +1,49 @@
+<div class="container">
+
+  <div class="row mb-5">
+    <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+      <div class="card" style="width: 22rem;">
+        <div class="card-body">
+          <!-- <input type="text" name="termino" id=""
+            class="form-control"
+            > -->
+            <div class="form-inline justify-content-center">
+              <div class="form-group mb-2">
+                <input type="text" class="form-control" [(ngModel)]="lugar" id="" placeholder="Encuentralo Aqui">
+              </div>
+              <button (click)="buscarLugar(lugar)" class="btn btn-primary mb-2 ml-2">Buscar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-end col-md-6 col-sm-12 d-flex justify-content-start">
+      <div class="card" style="width: 22rem;">
+        <img src="../../../../assets/img/travel.png" class="img-fluid" alt="Imagen">
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-1 col-md-3 col-sm-12">
+      <p>Paquetes</p>
+    </div>
+    <div class="col-lg-11 col-md-9 col-sm-12">
+      <hr>
+    </div>
+    <h3 *ngIf="exito">Resultados de busqueda: </h3>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-2" *ngFor="let item of paquetes; let i = index">
+      <div class="card" style="width: 16rem;">
+        <img [src]="images[i]" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Departamento: {{ item.address.country }}</h5>
+          <p class="card-text">Municipio: {{ item.address.municipality }}</p>
+          <p class="card-text">Direccion: {{ item.address.countrySubdivision }}</p>
+          <a href="#" class="btn btn-light">Ver Producto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
